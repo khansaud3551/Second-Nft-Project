@@ -1,0 +1,132 @@
+nav.navbars {
+  background: var(--white);
+}
+
+.logo {
+  width: 356px;
+}
+
+.nav__icon {
+  font-size: 31px;
+  color: var(--dark);
+}
+
+a {
+  line-height: normal !important;
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 0.9rem;
+  color: var(--primary);
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='grey' d='M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z'%3E%3C/path%3E%3C/svg%3E");
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-size: 100% 100%;
+}
+
+ul.links-lists {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+li.nav-items {
+  list-style-type: none;
+  margin-left: 40px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 21px;
+}
+
+nav a.is-active {
+  color: maroon;
+}
+
+.active {
+  color: green;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar-toggler {
+    display: block;
+  }
+
+  div.navbar-links {
+    margin-right: 0;
+    position: absolute;
+    width: 75%;
+    background: var(--white);
+    z-index: 99;
+    margin-top: 3rem;
+    float: right;
+    right: 0;
+    height: 100vh;
+    transition: all ease-in-out 0.3s;
+    align-self: flex-start;
+    border-top: 2px solid maroon;
+  }
+
+  ul.links-lists {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .navbar-links.menu-collapse {
+    margin-right: -75%;
+    width: 0;
+    overflow: hidden;
+  }
+
+  li.nav-items {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 0;
+  }
+
+  li.nav-items a.nav-links {
+    padding: 10px 20px;
+  }
+
+  .menu-collapse {
+    margin-right: -75%;
+    width: 0;
+    overflow: hidden;
+  }
+}

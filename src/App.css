@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
-}
+/* banner css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.banner__overlay {
+  position: relative;
+  top: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.banner_img {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  background-repeat: repeat;
+  /* /* object-position: bottom right; */
+
+  /* background-position: bottom right;
+ 
+  background-size: 91% auto; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.overlay_item {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  filter: brightness(180%) contrast(52%) saturate(200%) blur(0px)
+    hue-rotate(0deg);
+
+  background-color: #ffffff;
+  opacity: 0.41;
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+  transition-property: background, border-radius, opacity;
+  transition-duration: 0.3s, 0.3s, 0.3s;
+  transition-timing-function: ease, ease, ease;
+  transition-delay: 0s, 0s, 0s;
+}
+
+.banner_cont {
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.banner_btn {
+  font-family: "Grandstander", Sans-serif;
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: 2.1px;
+  fill: var(--e-global-color-03def09);
+  color: var(--e-global-color-03def09);
+  background-color: #fed766;
+  border-style: solid;
+  border-width: 4px 4px 4px 4px;
+  border-color: var(--e-global-color-03def09);
+  border-radius: 10px 10px 10px 10px;
+  padding: 12px 40px;
+
+  font-weight: 800;
+  width: 90%;
+  cursor: pointer;
+  transition: all 0.3s;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
+.banner_btn:hover {
+  color: var(--secondary);
+  background-color: #00000091;
+}
+
+/* //content */
+
+.h_main {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.bg__color {
+  background-color: #fed76633;
+}
+
+.anim_check {
+  animation-name: elementor-animation-buzz-out;
+  animation-duration: 0.75s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  width: 100%;
+  filter: brightness(100%) contrast(100%) saturate(100%) blur(0px)
+    hue-rotate(0deg);
+}
+
+.border__img {
+  border-style: solid;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-width: 5px 5px 5px 5px;
+  border-top-width: 5px;
+  border-right-width: 5px;
+  border-bottom-width: 5px;
+  border-left-width: 5px;
+  border-color: #ffffff;
+  border-top-color: rgb(255, 255, 255);
+  border-right-color: rgb(255, 255, 255);
+  border-bottom-color: rgb(255, 255, 255);
+  border-left-color: rgb(255, 255, 255);
+  border-radius: 70px 70px 70px 70px;
+  border-top-left-radius: 70px;
+  border-top-right-radius: 70px;
+  border-bottom-right-radius: 70px;
+  border-bottom-left-radius: 70px;
+}
+
+.border_team {
+  border-radius: 14px 14px 14px 14px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  border-bottom-left-radius: 14px;
+  border-style: solid;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-width: 5px 5px 5px 5px;
+  border-top-width: 5px;
+  border-right-width: 5px;
+  border-bottom-width: 5px;
+  border-left-width: 5px;
+  border-color: var(--e-global-color-86716a4);
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  transition-property: background, border, border-radius, box-shadow;
+  transition-duration: 0.3s, 0.3s, 0.3s, 0.3s;
+  transition-timing-function: ease, ease, ease, ease;
+  transition-delay: 0s, 0s, 0s, 0s;
+  padding: 0px 0px 0px 0px;
+}
+
+/* //faqs css  */
+
+.faqs__heading {
+  font-size: 92px;
+}
+
+/* //footer */
+
+.img__footer {
+  width: 20%;
+  margin-left: -72px !important;
+}
+.footer__bottom {
+  gap: 25px;
+}
+
+.footer__bottom > a {
+  text-decoration: underline;
 }
