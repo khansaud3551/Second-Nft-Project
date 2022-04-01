@@ -2,12 +2,22 @@ nav.navbars {
   background: var(--white);
 }
 
-.logo {
+/* .logo {
   width: 356px;
+} */
+
+.logo {
+  width: 76px;
+}
+
+.logo__title {
+  font-size: 55px;
+  font-weight: 600;
+  margin-top: -10px !important;
 }
 
 .nav__icon {
-  font-size: 31px;
+  font-size: 33px;
   color: var(--dark);
 }
 
@@ -59,7 +69,7 @@ li.nav-items {
 
 a {
   text-decoration: none;
-  font-size: 21px;
+  font-size: 24px;
 }
 
 nav a.is-active {
@@ -67,12 +77,16 @@ nav a.is-active {
 }
 
 .active {
-  color: green;
+  color: var(--secondary);
 }
 
 .container {
   width: 60%;
   margin: 0 auto;
+}
+
+a {
+  cursor: pointer !important;
 }
 
 @media only screen and (min-width: 992px) {

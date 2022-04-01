@@ -6,8 +6,8 @@ function Content2() {
       <div className="container h_main  d-flex align-items-center">
         <div className="row d-flex align-items-center">
           <div className="col-md-8 text-start">
-            <h2>Why own a Big Bro?</h2>
-            <p className="line">
+            <h2 data-aos="fade-right">Why own a Big Bro?</h2>
+            <p data-aos="slide-right" className="line">
               Who doesn’t want a Big Bro. On a more serious note, owning a Big
               Bro doesn’t only give you a revolutionized PFP but it gives you
               access to events, giveaways, and our airdrops. Big Bros is aimed

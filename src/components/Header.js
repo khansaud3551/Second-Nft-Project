@@ -7,6 +7,8 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
+import { Link } from "react-scroll";
+
 import "../css/Header.css";
 
 function Header() {
@@ -24,13 +26,23 @@ function Header() {
     <div>
       <nav className="navbars">
         <div className="navbar-container ">
-          <a href="#" className="brand-title">
+          <a
+            data-aos="slide-down"
+            href="#"
+            className="d-flex align-items-center brand-title "
+          >
+            <img className="logo" src="assets/head2.png" alt="" />
+            <h1 className="m-0 logo__title text-black">Big Bros</h1>
+          </a>
+
+          {/* //old code */}
+          {/* <a href="#" className="brand-title">
             <img
               className="logo"
               src="https://www.doodledogsnft.com/wp-content/uploads/2021/11/doodle-dogs-text-logo-blk-min-1024x199.png"
               alt=""
             />
-          </a>
+          </a> */}
           <button
             onClick={(e) => {
               handleNavbarButton(e);
@@ -41,34 +53,60 @@ function Header() {
           </button>
           <div ref={navbarLinks} className="navbar-links menu-collapse">
             <ul className="links-lists m-0">
-              <li className="nav-items">
-                <NavLink
-                  activeclassname="is-active"
+              <li
+                className="nav-items"
+                data-aos="slide-down"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+              >
+                <Link
+                  activeClass="is-active"
                   className="nav-links"
-                  to="/"
-                >
-                  Home
-                </NavLink>
-              </li>
-              <li className="nav-items">
-                <NavLink
-                  activeclassname="is-active"
-                  className="nav-links"
-                  to="/about"
+                  to="rarity"
+                  spy={true}
+                  smooth={true}
                 >
                   About
-                </NavLink>
+                </Link>
               </li>
-              <li className="nav-items">
-                <NavLink
+              <li
+                data-aos="slide-down"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+                className="nav-items"
+              >
+                <Link
                   activeclassname="is-active"
                   className="nav-links"
-                  to="/contact"
+                  spy={true}
+                  smooth={true}
+                  to="bg__color"
                 >
-                  Contact
-                </NavLink>
+                  Team
+                </Link>
               </li>
-              <li className="nav-items">
+              <li
+                data-aos="slide-down"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+                className="nav-items"
+              >
+                <Link
+                  activeclassname="is-active"
+                  className="nav-links"
+                  to="faqs"
+                  spy={true}
+                  smooth={true}
+                >
+                  FAQ
+                </Link>
+              </li>
+              <li
+                className="nav-items"
+                data-aos="slide-down"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+              >
                 <NavLink
                   activeclassname="is-active"
                   className="nav-links"
@@ -77,7 +115,12 @@ function Header() {
                   <i className="bi bi-discord nav__icon" />
                 </NavLink>
               </li>
-              <li className="nav-items">
+              <li
+                className="nav-items"
+                data-aos="slide-down"
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+              >
                 <NavLink
                   activeclassname="is-active"
                   className="nav-links "
@@ -111,7 +154,7 @@ function AllRoutes({ hideMenu }) {
     <>
       <Routes>
         <Route path="/about" element={<Home />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/contact" element={null}></Route>
         <Route path="/" element={<Home />}></Route>
       </Routes>
     </>

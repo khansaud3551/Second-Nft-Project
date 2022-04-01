@@ -2,7 +2,10 @@ import React from "react";
 
 function Banner() {
   return (
-    <div className="banner px-0 container-fluid banner__overlay">
+    <div
+      className="banner px-0 container-fluid banner__overlay"
+      data-aos="fade"
+    >
       <img className="banner_img" src="assets/banner.png" alt="" />
       <div className="container banner_cont">
         <button className="banner_btn">BUY ON OPENSEA</button>

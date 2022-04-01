@@ -9,8 +9,18 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Rarity from "./components/Rarity";
 import Team from "./components/Team";
+import AOS from "aos";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out-cubic",
+      mirror: true,
+    });
+  }, []);
   return (
     <div className="App ">
       <Header />
