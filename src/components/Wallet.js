@@ -50,15 +50,26 @@ function Wallet() {
   };
 
   // listen for account changes
-  window.ethereum.on("accountsChanged", accountChangedHandler);
 
-  window.ethereum.on("chainChanged", chainChangedHandler);
+  useEffect(() => {
+    if (window.ethereum) {
+      window.ethereum.on("accountsChanged", accountChangedHandler);
+      window.ethereum.on("chainChanged", chainChangedHandler);
+    }
+  }, []);
+
+  //   window.ethereum.on("accountsChanged", accountChangedHandler);
+
+  //   window.ethereum.on("chainChanged", chainChangedHandler);
 
   // return <div><button class="btn-primary px-2 py-2 rounded ml-3 " onClick={connectWalletHandler}>{connButtonText}</button></div>;
   return (
     <div className="walletCard">
       <button
-        className="btn-primary px-2 py-2 rounded ml-3"
+        data-aos="slide-down"
+        data-aos-easing="linear"
+        data-aos-duration="1000"
+        className="styling__btn89 px-3  rounded ml-4"
         onClick={connectWalletHandler}
       >
         {connButtonText}
@@ -69,7 +80,7 @@ function Wallet() {
       <div className="balanceDisplay">
         <h3>Balance: {userBalance}</h3>
       </div> */}
-      {errorMessage}
+      {/* {errorMessage} */}
     </div>
   );
 }

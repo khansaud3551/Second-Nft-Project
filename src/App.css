@@ -188,3 +188,28 @@
 .bg__footer {
   background-color: #ffdbf0;
 }
+
+.styling__btn89 {
+  background-color: #000000;
+  color: white;
+  outline: none;
+  font-size: 22px;
+
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border: 1px solid black;
+}
+
+.styling__btn89:hover {
+  background-color: white;
+  color: black;
+  outline: none;
+  border: 1px solid black;
+  box-shadow: var(rgb(0, 0, 0), 0 0 rgb(0, 0, 0)), var(black, 0 0 rgb(0, 0, 0)),
+    var(rgb(0, 0, 0));
+}
+
+/* .styling__btn89:focus {
+  outline: none;
+  transform: scale(1.2);
+} */
