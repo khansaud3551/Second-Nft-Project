@@ -131,9 +131,12 @@ function Header() {
                   <i className="bi bi-twitter nav__icon" />
                 </NavLink>
               </li>
-              {<div>
-                {Wallet()}
-              </div>}
+              <div
+                className="btn-primary px-2 py-2 rounded ml-3 "
+                onClick={Wallet}
+              >
+                wallet
+              </div>
             </ul>
           </div>
         </div>
