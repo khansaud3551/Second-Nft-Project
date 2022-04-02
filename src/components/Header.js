@@ -8,6 +8,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { Link } from "react-scroll";
+import Wallet from "./Wallet";
 
 import "../css/Header.css";
 
@@ -22,6 +23,7 @@ function Header() {
       navbarLinks.current.classList.add("menu-collapse");
     }
   };
+
   return (
     <div>
       <nav className="navbars">
@@ -129,6 +131,12 @@ function Header() {
                   <i className="bi bi-twitter nav__icon" />
                 </NavLink>
               </li>
+              <button
+                className="btn-primary px-2 py-2 rounded ml-3 "
+                onClick={Wallet}
+              >
+                wallet
+              </button>
             </ul>
           </div>
         </div>
