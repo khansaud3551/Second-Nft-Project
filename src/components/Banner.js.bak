@@ -63,7 +63,7 @@ function Banner() {
       data-aos="fade"
     >
       <img className="banner_img" src="assets/banner.png" alt="" />
-      <div className="container banner_cont d-flex flex-column flex-md-row ">
+      <div className="banner_cont d-flex flex-column flex-md-row ">
         <div id="mydiv" className="col-md-3 div_style2">
           <div className="d-flex w-100">
             <input

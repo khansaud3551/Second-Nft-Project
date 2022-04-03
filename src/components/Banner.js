@@ -18,10 +18,10 @@ var saleState = contractInstance.methods
   .then(function (_state) {
     console.log("Sale state is " + _state);
     if (_state == 0) {
-      // $("#mydiv").hide();
-      // $("#nft-num").hide();
-      // $("#mint-btn").html("Public sale not open yet");
-      // $("#mint-btn").prop("disabled", true);
+      $("#mydiv").hide();
+      $("#nft-num").hide();
+      $("#mint-btn").html("Public sale not open yet");
+      $("#mint-btn").prop("disabled", true);
     } else {
       $("#mydiv").show();
       $("#nft-num").show();
