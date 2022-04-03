@@ -146,6 +146,57 @@ p {
   overflow-x: hidden !important;
 }
 
+.div_style2 {
+  background-color: #fbe87f;
+  border-color: #4a4a4a !important;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border-style: solid;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-width: 4px 4px 4px 4px;
+  border-top-width: 4px;
+  border-right-width: 4px;
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+  border-color: var(--e-global-color-03def09);
+  outline: none;
+  font-size: 35px;
+}
+
+.custom_style5675 {
+  background-color: #fbe87f;
+  border: none;
+  outline: none;
+  padding: 10px 10px;
+}
+
+.btn-primary {
+  background-color: #4a4a4a !important;
+  border-color: #4a4a4a !important;
+}
+
+.btn-primary:focus {
+  outline: none !important;
+  border: none !important;
+}
+
+.gap_8 {
+  gap: 2px;
+}
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
 @media screen and (max-width: 768px) {
   .container {
     height: auto !important;

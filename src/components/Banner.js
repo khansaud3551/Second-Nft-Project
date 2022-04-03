@@ -420,10 +420,14 @@ var saleState = contractInstance.methods
   .then(function (_state) {
     console.log("Sale state is " + _state);
     if (_state == 0) {
+      $("#mydiv").hide();
+
       $("#nft-num").hide();
       $("#mint-btn").html("Public sale not open yet");
       $("#mint-btn").prop("disabled", true);
     } else {
+      $("#mydiv").show();
+
       $("#nft-num").show();
       $("#mint-btn").html("Mint NFTs");
       $("#mint-btn").prop("disabled", false);
@@ -463,22 +467,56 @@ function Banner() {
       data-aos="fade"
     >
       <img className="banner_img" src="assets/banner.png" alt="" />
-      <div className="container banner_cont d-flex flex-column">
-        <input
-          id="nft-num"
-          name="nft-num"
-          className="form-control input-lg"
-          type="number"
-          name="number"
-          defaultValue="1"
-          min="1"
-          max="10"
-          readonly
-        ></input>
-        <span className="d-flex justify-content-center">
+      <div className="container banner_cont d-flex flex-column flex-md-row ">
+        <div id="mydiv" className="col-md-3 div_style2">
+          <div className="d-flex w-100">
+            <input
+              className="custom_style5675 input-lg w-100"
+              id="nft-num"
+              name="nft-num"
+              type="number"
+              name="number"
+              defaultValue="1"
+              placeholder="1"
+              min="1"
+              max="10"
+              readonly
+            ></input>
+
+            {/* // adding increment and decrement buttons */}
+
+            <div className="d-flex flex-column gap_8">
+              <button
+                className="btn btn-primary "
+                onClick={() => {
+                  var num = parseInt($("#nft-num").val());
+                  if (num > 1) {
+                    $("#nft-num").val(num - 1);
+                  }
+                }}
+              >
+                -
+              </button>
+
+              <button
+                className="btn btn-primary"
+                onClick={() => {
+                  var num = parseInt($("#nft-num").val());
+                  if (num < 10) {
+                    $("#nft-num").val(num + 1);
+                  }
+                }}
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <span className="d-flex justify-content-center col-md-9">
           <button
             type="submit"
-            className="banner_btn"
+            className="banner_btn w-100"
             id="mint-btn"
             onClick={_mintNFT}
           >
