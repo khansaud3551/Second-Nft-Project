@@ -161,8 +161,6 @@ function AllRoutes({ hideMenu }) {
     <>
       <Routes>
         <Route path="/about" element={<Home />}></Route>
-        <Route path="/contact" element={null}></Route>
-        <Route path="/" element={<Home />}></Route>
       </Routes>
     </>
   );
@@ -170,14 +168,6 @@ function AllRoutes({ hideMenu }) {
 
 function Home() {
   return <h1 className="m-0"></h1>;
-}
-
-function About() {
-  return <h1>This is about page</h1>;
-}
-
-function Contact() {
-  return <h1>This is contact page</h1>;
 }
 
 export default Header;
