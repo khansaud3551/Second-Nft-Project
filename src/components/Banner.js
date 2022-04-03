@@ -487,18 +487,6 @@ function Banner() {
 
             <div className="d-flex flex-column gap_8">
               <button
-                className="btn btn-primary "
-                onClick={() => {
-                  var num = parseInt($("#nft-num").val());
-                  if (num > 1) {
-                    $("#nft-num").val(num - 1);
-                  }
-                }}
-              >
-                -
-              </button>
-
-              <button
                 className="btn btn-primary"
                 onClick={() => {
                   var num = parseInt($("#nft-num").val());
@@ -508,6 +496,18 @@ function Banner() {
                 }}
               >
                 +
+              </button>
+
+              <button
+                className="btn btn-primary "
+                onClick={() => {
+                  var num = parseInt($("#nft-num").val());
+                  if (num > 1) {
+                    $("#nft-num").val(num - 1);
+                  }
+                }}
+              >
+                -
               </button>
             </div>
           </div>
