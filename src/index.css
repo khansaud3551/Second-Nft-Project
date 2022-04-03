@@ -123,6 +123,9 @@ p {
 }
 
 @media (max-width: 960px) {
+  .navbar-container {
+    width: 100% !important;
+  }
   .text679 {
     font-size: 30px;
   }

@@ -109,13 +109,13 @@ function Header() {
                 data-aos-easing="linear"
                 data-aos-duration="1000"
               >
-                <NavLink
+                {/* <NavLink
                   activeclassname="is-active"
                   className="nav-links"
                   to="/contact"
                 >
                   <i className="bi bi-discord nav__icon" />
-                </NavLink>
+                </NavLink> */}
               </li>
               <li
                 className="nav-items"
@@ -123,13 +123,9 @@ function Header() {
                 data-aos-easing="linear"
                 data-aos-duration="1000"
               >
-                <NavLink
-                  activeclassname="is-active"
-                  className="nav-links "
-                  to="/contact"
-                >
+                <a href="https://twitter.com/bigbrosnfts" target="_blank">
                   <i className="bi bi-twitter nav__icon" />
-                </NavLink>
+                </a>
               </li>
               {
                 <div>
