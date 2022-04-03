@@ -69,6 +69,19 @@
   transition-duration: 0.3s;
   transition-timing-function: ease;
   transition-delay: 0s;
+
+  font-size: 35px !important;
+  font-weight: 800;
+  letter-spacing: 2.1px;
+  fill: var(--e-global-color-03def09) !important;
+  color: var(--e-global-color-03def09) !important;
+  background-color: #fbe87f !important;
+  border-style: solid !important;
+  border-width: 4px 4px 4px 4px !important;
+  border-color: var(--e-global-color-03def09) !important;
+  border-radius: 10px 10px 10px 10px;
+  padding: 12px 40px;
+  font-weight: 800;
 }
 
 .banner_btn:hover {
