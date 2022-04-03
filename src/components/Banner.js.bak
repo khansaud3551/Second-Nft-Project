@@ -13,14 +13,14 @@ console.log(contractInstance);
 var saleState = contractInstance.methods.saleState().call().then( function (_state) {
 	console.log("Sale state is " + _state);
 	if(_state==0) {
-		$('#nft-num').hide();
+		//$('#nft-num').hide();
 		$('#mint-btn').html("Public sale not open yet");
-		$('#mint-btn').prop('disabled', true);
+		//$('#mint-btn').prop('disabled', true);
 	}
 	else {
-		$('#nft-num').show();
+		//$('#nft-num').show();
 		$('#mint-btn').html("Mint NFTs");
-		$('#mint-btn').prop('disabled', false);
+		//$('#mint-btn').prop('disabled', false);
 	}
  });
 
