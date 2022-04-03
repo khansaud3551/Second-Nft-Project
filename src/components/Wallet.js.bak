@@ -58,7 +58,7 @@ function Wallet() {
     }
   }, []);
 
-  //   window.ethereum.on("accountsChanged", accountChangedHandler);
+   window.ethereum.on("accountsChanged", accountChangedHandler);
 
   //   window.ethereum.on("chainChanged", chainChangedHandler);
 
